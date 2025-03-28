@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  background-color: #000000; /* Fond noir */
+  color: #ffffff; /* Texte blanc par défaut */
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 1rem; /* Ajoute un peu d'espace autour */
+  font-family: 'Press Start 2P', cursive; /* Police pixel NES.css (optionnel ici, mais utile) */
+}
+
+/* Assure-toi que les conteneurs NES.css utilisent le thème sombre */
+.nes-container.is-dark {
+    background-color: #212529; /* Fond des conteneurs sombres NES.css */
+}
+
+/* Tu peux aussi forcer les conteneurs à être sombres par défaut */
+.nes-container {
+   background-color: #212529 !important;
+   border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 0 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M0 4 h1 v1 h-1 z M7 4 h1 v1 h-1 z M1 5 h1 v1 h-1 z M6 5 h1 v1 h-1 z M2 6 h1 v1 h-1 z M5 6 h1 v1 h-1 z M3 7 h1 v1 h-1 z M4 7 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>') !important;
+   border-image-width: 4 !important;
+   border-image-repeat: repeat !important;
+}
+
+.nes-container.with-title > .title {
+    color: #fff !important;
+    background-color: #212529 !important;
+}
+
+/* Cibler le span DANS le badge DANS un conteneur NES */
+.nes-container .nes-badge > span {
+  display: inline-block !important; /* Important pour que width:max-content fonctionne bien */
+  width: -moz-max-content !important; /* Préfixe Firefox */
+  width: max-content !important;   /* Force la largeur au contenu max (sur une ligne avec nowrap) */
+  white-space: nowrap !important;   /* Garde la ligne unique */
+  max-width: none !important;       /* Retire toute autre limite max */
+  overflow: visible !important;     /* Voir le contenu */
+  height: auto !important;          /* Hauteur auto */
+  vertical-align: middle;         /* Bon alignement */
+  text-overflow: clip !important; /* Empêche les "..." si jamais ça déborde un peu */
+  margin: 0 10;
+}
+
+/* Garder le conteneur externe flexible et sans contrainte de largeur */
+.nes-container .nes-badge {
+  display: inline-flex; /* Ou inline-block */
+  align-items: center;
+  /* On retire width:fit-content si on l'avait mis */
+  /* width: auto; */ /* Laisser le conteneur s'adapter à son contenu (le span) */
+  max-width: none !important;
+  overflow: visible !important;
+  vertical-align: middle;
+  margin: 0.5rem 1rem; /* Ajoute un peu d'espace à droite si besoin */
+  /* Ajuste les marges pour l'espacement entre badges si 'gap' ne suffit pas */
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 2;
+  color: #209cee;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 2;
+}
+
+h3 {
+  font-size: 1.2em;
+  line-height: 1.8;
+}
+
+p {
+  font-size: .8em;
+  line-height: 1.5;
+}
+
+li {
+  font-size: .7em;
+  line-height: 1.5;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Style initial pour les éléments avant l'animation */
+.fade-in-section {
+  opacity: 0; /* Commence invisible */
+  transform: translateY(30px); /* Commence légèrement plus bas */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animation douce */
+  /* Ajuste la durée (0.6s) et l'effet (ease-out) si tu veux */
+}
+
+/* Style pour les éléments une fois qu'ils sont visibles */
+.fade-in-section.is-visible {
+  opacity: 1; /* Devient visible */
+  transform: translateY(0); /* Retourne à sa position normale */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
