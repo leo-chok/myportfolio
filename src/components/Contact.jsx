@@ -78,7 +78,7 @@ function Contact() {
             </div>
 
             <button type="submit" className="nes-btn is-primary">
-              Envoyer Message
+              Envoyer
             </button>
           </form>
         </div>
