@@ -1,37 +1,40 @@
 // src/App.jsx
-import React from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import React from "react";
 
+// Importer tous tes composants
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div> {/* Ou <main> */}
-      <Hero />
-      {/* Utilise des conteneurs NES.css pour structurer si tu veux */}
-      <section className="nes-container is-dark with-title">
+    <div>
+      <Navbar />
+      <section id="accueil">
+        <Hero />
+      </section>
+      <section id="about">
         <About />
       </section>
-
-      <section className="nes-container is-dark with-title">
-        <Skills />
-      </section>
-
-      <section className="nes-container is-dark with-title">
+      <section id="experience">
         <Experience />
       </section>
-
-      <section className="nes-container is-dark with-title">
+      <section id="skills">
+        <Skills />
+      </section>
+      <section id="projects">
         <Projects />
       </section>
-
-      <section className="nes-container is-dark with-title">
+      <section id="contact">
         <Contact />
       </section>
+      <div style={{ paddingTop: "80px" }}></div>
+      <Footer />
     </div>
   );
 }
