@@ -54,7 +54,7 @@
   /* Ajuste le padding quand ouvert */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 4px solid #fff; /* Afficher la bordure seulement quand ouvert */
+  border-bottom: 4px dotted #fff; /* Afficher la bordure seulement quand ouvert */
 }
 
 /* Style des liens dans le menu mobile */
