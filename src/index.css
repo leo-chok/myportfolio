@@ -8,7 +8,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,57 +24,13 @@ a:hover {
 }
 
 body {
-  background-color: #000000; /* Fond noir */
+  background-color: #212529; /* Fond noir */
   color: #ffffff; /* Texte blanc par défaut */
   margin: 0; /* Supprime les marges par défaut */
   padding: 1rem; /* Ajoute un peu d'espace autour */
   font-family: "Press Start 2P", cursive; /* Police pixel NES.css (optionnel ici, mais utile) */
 }
 
-/* Assure-toi que les conteneurs NES.css utilisent le thème sombre */
-.nes-container.is-dark {
-  background-color: #212529; /* Fond des conteneurs sombres NES.css */
-}
-
-/* Tu peux aussi forcer les conteneurs à être sombres par défaut */
-.nes-container {
-  background-color: #212529 !important;
-  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="8" height="8" xmlns="http://www.w3.org/2000/svg"><path d="M3 0 h1 v1 h-1 z M4 1 h1 v1 h-1 z M2 2 h1 v1 h-1 z M5 2 h1 v1 h-1 z M1 3 h1 v1 h-1 z M6 3 h1 v1 h-1 z M0 4 h1 v1 h-1 z M7 4 h1 v1 h-1 z M1 5 h1 v1 h-1 z M6 5 h1 v1 h-1 z M2 6 h1 v1 h-1 z M5 6 h1 v1 h-1 z M3 7 h1 v1 h-1 z M4 7 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>') !important;
-  border-image-width: 4 !important;
-  border-image-repeat: repeat !important;
-}
-
-.nes-container.with-title > .title {
-  color: #fff !important;
-  background-color: #212529 !important;
-}
-
-/* Cibler le span DANS le badge DANS un conteneur NES */
-.nes-container .nes-badge > span {
-  display: inline-block !important; /* Important pour que width:max-content fonctionne bien */
-  width: -moz-max-content !important; /* Préfixe Firefox */
-  width: max-content !important; /* Force la largeur au contenu max (sur une ligne avec nowrap) */
-  white-space: nowrap !important; /* Garde la ligne unique */
-  max-width: none !important; /* Retire toute autre limite max */
-  overflow: visible !important; /* Voir le contenu */
-  height: auto !important; /* Hauteur auto */
-  vertical-align: middle; /* Bon alignement */
-  text-overflow: clip !important; /* Empêche les "..." si jamais ça déborde un peu */
-  margin: 0 10;
-}
-
-/* Garder le conteneur externe flexible et sans contrainte de largeur */
-.nes-container .nes-badge {
-  display: inline-flex; /* Ou inline-block */
-  align-items: center;
-  /* On retire width:fit-content si on l'avait mis */
-  /* width: auto; */ /* Laisser le conteneur s'adapter à son contenu (le span) */
-  max-width: none !important;
-  overflow: visible !important;
-  vertical-align: middle;
-  margin: 0.5rem 1rem; /* Ajoute un peu d'espace à droite si besoin */
-  /* Ajuste les marges pour l'espacement entre badges si 'gap' ne suffit pas */
-}
 
 h1 {
   font-size: 2em;
@@ -120,6 +75,38 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+
+
+
+
+/* Cibler le span DANS le badge DANS un conteneur NES */
+.nes-container .nes-badge > span {
+  display: inline-block !important; /* Important pour que width:max-content fonctionne bien */
+  width: -moz-max-content !important; /* Préfixe Firefox */
+  width: max-content !important; /* Force la largeur au contenu max (sur une ligne avec nowrap) */
+  white-space: nowrap !important; /* Garde la ligne unique */
+  max-width: none !important; /* Retire toute autre limite max */
+  overflow: visible !important; /* Voir le contenu */
+  height: auto !important; /* Hauteur auto */
+  vertical-align: middle; /* Bon alignement */
+  text-overflow: clip !important; /* Empêche les "..." si jamais ça déborde un peu */
+  margin: 0 10;
+}
+
+/* Garder le conteneur externe flexible et sans contrainte de largeur */
+.nes-container .nes-badge {
+  display: inline-flex; /* Ou inline-block */
+  align-items: center;
+  /* On retire width:fit-content si on l'avait mis */
+  /* width: auto; */ /* Laisser le conteneur s'adapter à son contenu (le span) */
+  max-width: none !important;
+  overflow: visible !important;
+  vertical-align: middle;
+  margin: 0.5rem 1rem; /* Ajoute un peu d'espace à droite si besoin */
+  /* Ajuste les marges pour l'espacement entre badges si 'gap' ne suffit pas */
 }
 
 /* Style initial pour les éléments avant l'animation */

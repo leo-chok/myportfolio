@@ -18,11 +18,11 @@ function Experience() {
     // 3. Attacher la ref et les classes pour l'animation
     <section
       ref={ref}
-      className={`nes-container is-dark with-title fade-in-section ${inView ? 'is-visible' : ''}`}
+      className={`nes-container is-rounded is-dark with-title fade-in-section ${inView ? 'is-visible' : ''}`}
       style={{ marginBottom: '2rem' }}
     >
       {/* Titre de la section */}
-      <h2 className="title">Expériences & Formation</h2>
+      <h1 className="title">Expériences & Formations</h1>
 
       {/* --- Formation --- */}
       <div style={{ marginBottom: '1.5rem' }}> {/* Bloc pour la formation */}

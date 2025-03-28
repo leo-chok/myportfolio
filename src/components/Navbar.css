@@ -4,7 +4,7 @@
 }
 
 /* Styles pour Mobile (par exemple, écrans < 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .desktop-nav-links {
     display: none; /* Cache les liens desktop sur mobile */
   }
@@ -21,9 +21,9 @@
 
 /* Style pour le lien actif (si tu l'utilises) */
 .nav-link.active {
-  color: #209cee !important;
+  color: #ffffff !important;
+  
 }
-
 
 /* Style du conteneur du menu mobile */
 .mobile-menu {
@@ -52,9 +52,9 @@
 .mobile-menu.open {
   max-height: 50vh; /* Hauteur max suffisante pour voir les liens (ajuste si besoin) */
   /* Ajuste le padding quand ouvert */
-   padding-top: 0.5rem;
-   padding-bottom: 0.5rem;
-   border-bottom: 4px solid #fff; /* Afficher la bordure seulement quand ouvert */
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid #fff; /* Afficher la bordure seulement quand ouvert */
 }
 
 /* Style des liens dans le menu mobile */
@@ -73,6 +73,6 @@
 }
 
 /* Style du lien actif dans le menu mobile (facultatif, si déjà défini globalement) */
-.mobile-menu .nav-link.active { 
-    color: #b4d426;
+.mobile-menu .nav-link.active {
+  color: #b4d426;
 }

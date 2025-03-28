@@ -10,12 +10,12 @@ function Hero() {
     duration: 500,
     spy: true,
     offset: -80, // Ajuste cette valeur ! Doit être environ -hauteurDeTaNavbar
-    // activeClass: "active", // On ajoutera cette classe CSS plus tard si tu veux
+    activeClass: "active", // On ajoutera cette classe CSS plus tard si tu veux
   };
   return (
     <section
-      className="nes-container is-dark is-centered"
-      style={{ marginBottom: "2rem" }}
+      className="nes-container is-dark is-rounded is-centered"
+      style={{ marginBottom: "2rem", marginTop: "6rem" }}
     >
       {/* Mettons le nom en couleur primaire */}
       <h1
@@ -61,9 +61,9 @@ function Hero() {
         >
           Mes Projets
         </Link>
-        <a href="#contact" className="nes-btn is-success">
+        <Link to="contact" className="nes-btn is-success" {...scrollProps}>
           Contactez-moi
-        </a>
+        </Link>
       </div>
     </section>
   );

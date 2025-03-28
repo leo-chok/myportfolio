@@ -46,126 +46,129 @@ function Projects() {
       {/* Titre Principal de la section Projets */}
       {/* On utilise un container SANS 'with-title' pour le titre principal cette fois */}
       <div
-        className="nes-container is-dark"
+        className="nes-container is-rounded is-dark"
         style={{ marginBottom: "1.5rem", textAlign: "center" }}
       >
         <h2>Mes Projets</h2>
-      </div>
 
-      {/* Mapper sur chaque projet dans projectData */}
-      {projectData.map((project, index) => (
-        // Utiliser un container NES pour chaque carte de projet
-        // Note: On pourrait aussi appliquer l'animation à chaque carte individuellement
-        // en appelant useInView à l'intérieur du map, mais commençons simple.
-        <div
-          key={project.id}
-          className="nes-container is-dark with-title"
-          style={{ marginBottom: "2rem", justifyContent: 'center', textAlign: "center" }}
-        >
-          {/* Titre du projet dans le style NES */}
-          <h2>{project.title}</h2>
+        {/* Mapper sur chaque projet dans projectData */}
+        {projectData.map((project, index) => (
+          // Utiliser un container NES pour chaque carte de projet
+          // Note: On pourrait aussi appliquer l'animation à chaque carte individuellement
+          // en appelant useInView à l'intérieur du map, mais commençons simple.
+          <div
+            key={project.id}
+            className="nes-container is-rounded is-dark with-title"
+            style={{
+              marginBottom: "2rem",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+          >
+            <h2 className="title">{project.title}</h2>
 
-          {project.imageUrl ? (
-            <div
-              style={{
-                display: "flex",
-                maxWidth: "100%",
-                marginBottom: "1rem",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src={project.gifUrl}
-                alt={`Aperçu de ${project.title}`}
-                style={{ maxWidth: "50%"}}
-              />
-            </div>
-          ) : (
-            <div
-              className="nes-container is-dark"
-              style={{
-                padding: "2rem 1rem",
-                marginBottom: "1rem",
-                textAlign: "center",
-              }}
-            >
-              <p>Bientôt une image ou un GIF ici !</p>
-            </div>
-          )}
-
-          {/* Description du projet */}
-          <p style={{ marginBottom: "1rem" }}>{project.description}</p>
-
-          {/* Stack Technique (avec les badges) */}
-          <div style={{ marginBottom: "1.5rem" }}>
-            <p>
-              <strong>Technologies utilisées :</strong>
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                flexWrap: "wrap",
-                gap: "1rem 2rem",
-              }}
-            >
-              {project.techStack.map((tech, techIndex) => (
-                <div
-                  className="nes-badge"
-                  key={tech}
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <span
-                    className={
-                      badgeColors[(index + techIndex) % badgeColors.length]
-                    }
-                  >
-                    {tech}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Liens GitHub / Démo */}
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            {project.githubLink && (
-              <a
-                href={project.githubLink}
-                target="_blank" // Ouvre dans un nouvel onglet
-                rel="noopener noreferrer" // Sécurité pour target="_blank"
-                className="nes-btn is-primary"
-                style={{ marginRight: "1rem" }}
+            {project.imageUrl ? (
+              <div
+                style={{
+                  display: "flex",
+                  maxWidth: "100%",
+                  marginBottom: "1rem",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
               >
-                <i
-                  className="nes-icon github is-small"
-                  style={{ marginRight: "0.5rem" }}
-                ></i>
-                Code Source
-              </a>
-            )}
-            {project.liveDemoLink ? (
-              <a
-                href={project.liveDemoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nes-btn is-success"
-              >
-                <i
-                  className="nes-icon external-link is-small"
-                  style={{ marginRight: "0.5rem" }}
-                ></i>
-                Démo Live
-              </a>
+                <img
+                  src={project.gifUrl}
+                  alt={`Aperçu de ${project.title}`}
+                  style={{ maxWidth: "50%" }}
+                />
+              </div>
             ) : (
-              <button type="button" className="nes-btn is-disabled">
-                Démo Live (N/A)
-              </button>
+              <div
+                className="nes-container is-dark"
+                style={{
+                  padding: "2rem 1rem",
+                  marginBottom: "1rem",
+                  textAlign: "center",
+                }}
+              >
+                <p>Bientôt une image ou un GIF ici !</p>
+              </div>
             )}
+
+            {/* Description du projet */}
+            <p style={{ marginBottom: "1rem" }}>{project.description}</p>
+
+            {/* Stack Technique (avec les badges) */}
+            <div style={{ marginBottom: "1.5rem" }}>
+              <p>
+                <strong>Technologies utilisées :</strong>
+              </p>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexWrap: "wrap",
+                  gap: "1rem 2rem",
+                }}
+              >
+                {project.techStack.map((tech, techIndex) => (
+                  <div
+                    className="nes-badge"
+                    key={tech}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <span
+                      className={
+                        badgeColors[(index + techIndex) % badgeColors.length]
+                      }
+                    >
+                      {tech}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Liens GitHub / Démo */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              {project.githubLink && (
+                <a
+                  href={project.githubLink}
+                  target="_blank" // Ouvre dans un nouvel onglet
+                  rel="noopener noreferrer" // Sécurité pour target="_blank"
+                  className="nes-btn is-primary"
+                  style={{ marginRight: "1rem" }}
+                >
+                  <i
+                    className="nes-icon github is-small"
+                    style={{ marginRight: "0.5rem" }}
+                  ></i>
+                  Code Source
+                </a>
+              )}
+              {project.liveDemoLink ? (
+                <a
+                  href={project.liveDemoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nes-btn is-success"
+                >
+                  <i
+                    className="nes-icon external-link is-small"
+                    style={{ marginRight: "0.5rem" }}
+                  ></i>
+                  Démo Live
+                </a>
+              ) : (
+                <button type="button" className="nes-btn is-disabled">
+                  Démo Live (N/A)
+                </button>
+              )}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }

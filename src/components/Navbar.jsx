@@ -14,38 +14,40 @@ function Navbar() {
 
   // --- Styles (mis ici pour l'instant) ---
   const navbarStyle = {
+    margin: 0,
     position: "fixed",
-    top: 0,
+    top: -1,
     left: 0,
     width: "100%",
     zIndex: 1000,
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
   };
 
   const navContainerStyle = {
-    backgroundColor: "#212529",
+    backgroundColor: "#92CC41",
     marginBottom: "0",
     borderImageRepeat: "repeat",
-    padding: "0.5rem 1rem",
+    padding: "1rem 2rem",
   };
 
   const navContentStyle = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    maxWidth: "1200px",
+    maxWidth: "100%",
     margin: "0 auto",
   };
 
   // Style pour le conteneur des liens desktop (sera caché sur mobile par CSS)
   const desktopLinksStyle = {
-    gap: "1rem",
+    with: "100%",
   };
 
   // Style de base pour les liens
   const linkStyle = {
-    color: "#fff",
+    margin: "0 1em",
+    color: "black",
     textDecoration: "none",
-    cursor: "pointer",
   };
 
   // Propriétés communes pour react-scroll
@@ -71,7 +73,7 @@ function Navbar() {
 
   return (
     <nav style={navbarStyle}>
-      <div className="nes-container is-dark" style={navContainerStyle}>
+      <div style={navContainerStyle}>
         <div style={navContentStyle}>
           {/* Côté Gauche: Logo/Nom */}
           <div>
@@ -134,22 +136,69 @@ function Navbar() {
               </Link>
             </div>
             {/* Bouton Hamburger */}
-                <button style={hamburgerButtonStyle} className="mobile-menu-button" onClick={toggleMobileMenu} aria-label="Toggle menu">
-                  ☰
-                </button>
+            <button
+              style={hamburgerButtonStyle}
+              className="mobile-menu-button"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle menu"
+            >
+              ☰
+            </button>
           </div>
         </div>
       </div>
 
       {/* --- MENU MOBILE CONDITIONNEL --- */}
       {isMobileMenuOpen && (
-        <div className="mobile-menu open"> {/* Ajout de la classe 'open' */}
-            {/* Copie les mêmes liens que pour desktop, mais ajoute onClick={closeMobileMenu} */}
-            <Link to="about" {...scrollProps} style={linkStyle} className="nav-link" onClick={closeMobileMenu}>À Propos</Link>
-            <Link to="experience" {...scrollProps} style={linkStyle} className="nav-link" onClick={closeMobileMenu}>Expériences</Link>
-            <Link to="skills" {...scrollProps} style={linkStyle} className="nav-link" onClick={closeMobileMenu}>Compétences</Link>
-            <Link to="projects" {...scrollProps} style={linkStyle} className="nav-link" onClick={closeMobileMenu}>Projets</Link>
-            <Link to="contact" {...scrollProps} style={linkStyle} className="nav-link" onClick={closeMobileMenu}>Contact</Link>
+        <div className="mobile-menu open">
+          {" "}
+          {/* Ajout de la classe 'open' */}
+          {/* Copie les mêmes liens que pour desktop, mais ajoute onClick={closeMobileMenu} */}
+          <Link
+            to="about"
+            {...scrollProps}
+            style={linkStyle}
+            className="nav-link"
+            onClick={closeMobileMenu}
+          >
+            À Propos
+          </Link>
+          <Link
+            to="experience"
+            {...scrollProps}
+            style={linkStyle}
+            className="nav-link"
+            onClick={closeMobileMenu}
+          >
+            Expériences
+          </Link>
+          <Link
+            to="skills"
+            {...scrollProps}
+            style={linkStyle}
+            className="nav-link"
+            onClick={closeMobileMenu}
+          >
+            Compétences
+          </Link>
+          <Link
+            to="projects"
+            {...scrollProps}
+            style={linkStyle}
+            className="nav-link"
+            onClick={closeMobileMenu}
+          >
+            Projets
+          </Link>
+          <Link
+            to="contact"
+            {...scrollProps}
+            style={linkStyle}
+            className="nav-link"
+            onClick={closeMobileMenu}
+          >
+            Contact
+          </Link>
         </div>
       )}
     </nav>

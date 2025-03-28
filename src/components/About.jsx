@@ -17,12 +17,12 @@ function About() {
     // 4. Ajouter les classes CSS dynamiquement
     <section
       ref={ref} // La ref pour que useInView observe cet élément
-      className={`nes-container is-dark with-title fade-in-section ${
+      className={`nes-container is-dark is-rounded with-title fade-in-section ${
         inView ? "is-visible" : ""
       }`} // Ajoute 'is-visible' quand inView est true
       style={{ marginBottom: "2rem" }}
     >
-      <h2 className="title">À Propos de moi</h2>
+      <h1 className="title">À Propos de moi</h1>
 
       {/* Le reste du contenu de la section */}
       <p>
