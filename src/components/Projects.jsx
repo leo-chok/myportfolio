@@ -2,6 +2,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
 import jambonbeurreLogo from "../assets/image_jambonbeurre.png";
+import jambonbeurreGif from "../assets/gif_jambonbeurre.gif";
 
 // Données du projet (à compléter)
 const projectData = [
@@ -11,7 +12,8 @@ const projectData = [
     // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
     description:
       "JambonBeurre est une application mobile conçue pour aider les personnes à trouver des compagnons de repas et éviter de manger seul. L'idée est née du constat que de nombreuses personnes, qu'elles soient étudiantes, salariées ou en voyage, prennent leurs repas seules alors qu'elles aimeraient partager un moment convivial autour d'une table. Développé dans le cadre d'un projet de fin de formation à La Capsule, JambonBeurre a été réalisé par une équipe de cinq développeurs en mettant l'accent sur la simplicité, l'expérience utilisateur et l'interaction en temps réel.",
-    imageUrl: jambonbeurreLogo, // TODO: Ajouter une URL d'image/GIF plus tard si souhaité
+    imageUrl: jambonbeurreLogo,
+    gifUrl: jambonbeurreGif,
     techStack: [
       "React Native",
       "Expo",
@@ -58,27 +60,25 @@ function Projects() {
         <div
           key={project.id}
           className="nes-container is-dark with-title"
-          style={{ marginBottom: "2rem" }}
+          style={{ marginBottom: "2rem", justifyContent: 'center', textAlign: "center" }}
         >
           {/* Titre du projet dans le style NES */}
-          <p className="title">{project.title}</p>
+          <h2>{project.title}</h2>
 
-          {/* --- Contenu de la carte projet --- */}
-
-          {/* TODO: Zone pour l'image/GIF */}
           {project.imageUrl ? (
             <div
               style={{
-                maxWidth: "50%",
+                display: "flex",
+                maxWidth: "100%",
                 marginBottom: "1rem",
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <img
-                src={project.imageUrl}
+                src={project.gifUrl}
                 alt={`Aperçu de ${project.title}`}
-                style={{ maxWidth: "100%", imageRendering: "pixelated" }}
+                style={{ maxWidth: "50%"}}
               />
             </div>
           ) : (
@@ -90,7 +90,7 @@ function Projects() {
                 textAlign: "center",
               }}
             >
-              <p>( Bientôt une image ou un GIF ici ! )</p>
+              <p>Bientôt une image ou un GIF ici !</p>
             </div>
           )}
 

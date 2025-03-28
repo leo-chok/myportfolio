@@ -1,0 +1,78 @@
+/* Styles par défaut (Desktop) */
+.mobile-menu-button {
+  display: none; /* Bouton hamburger caché sur desktop */
+}
+
+/* Styles pour Mobile (par exemple, écrans < 768px) */
+@media (max-width: 768px) {
+  .desktop-nav-links {
+    display: none; /* Cache les liens desktop sur mobile */
+  }
+
+  .mobile-menu-button {
+    display: block; /* Affiche le bouton hamburger sur mobile */
+    /* Tu peux ajouter d'autres styles spécifiques au bouton ici si besoin */
+  }
+
+  /* Ajuster le style du contenu de la navbar si besoin sur mobile */
+  /* Par exemple, si le logo prend trop de place à côté du bouton */
+  /* .nav-content-style { ... } */
+}
+
+/* Style pour le lien actif (si tu l'utilises) */
+.nav-link.active {
+  color: #209cee !important;
+}
+
+
+/* Style du conteneur du menu mobile */
+.mobile-menu {
+  /* Positionnement juste sous la navbar */
+  position: absolute; /* Ou 'fixed' si la navbar n'est pas son parent direct avec position relative */
+  top: 100%; /* Commence juste après la navbar */
+  left: 0;
+  right: 0; /* Prend toute la largeur */
+
+  background-color: #212529; /* Fond identique à la navbar */
+  /* Optionnel: ajoute une bordure comme la navbar si tu veux */
+  /* border-bottom: 4px solid #fff; */
+  /* border-image... si tu utilises la bordure nes */
+
+  /* Cache le contenu qui dépasse pendant l'animation */
+  overflow: hidden;
+  /* Animation avec max-height */
+  max-height: 0; /* Commence avec hauteur 0 (caché) */
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animation douce */
+  padding-top: 0;
+  padding-bottom: 0;
+  z-index: 999; /* Juste en dessous de la navbar si elle a 1000 */
+}
+
+/* Style quand le menu est ouvert (classe 'open' ajoutée via JS) */
+.mobile-menu.open {
+  max-height: 50vh; /* Hauteur max suffisante pour voir les liens (ajuste si besoin) */
+  /* Ajuste le padding quand ouvert */
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   border-bottom: 4px solid #fff; /* Afficher la bordure seulement quand ouvert */
+}
+
+/* Style des liens dans le menu mobile */
+.mobile-menu .nav-link {
+  display: block; /* Un lien par ligne */
+  padding: 0.8rem 1.5rem; /* Padding généreux pour le clic mobile */
+  text-align: center; /* Centrer le texte */
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid #444; /* Ligne de séparation fine */
+}
+
+/* Pas de bordure au-dessus du premier lien */
+.mobile-menu .nav-link:first-child {
+  border-top: none;
+}
+
+/* Style du lien actif dans le menu mobile (facultatif, si déjà défini globalement) */
+.mobile-menu .nav-link.active { 
+    color: #b4d426;
+}
