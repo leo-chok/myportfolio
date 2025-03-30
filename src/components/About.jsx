@@ -20,7 +20,7 @@ function About() {
       className={`nes-container is-dark is-rounded with-title fade-in-section ${
         inView ? "is-visible" : ""
       }`} // Ajoute 'is-visible' quand inView est true
-      style={{ marginBottom: "2rem" }}
+      style={{ marginBottom: "5rem"}}
     >
       <h1 className="title">À Propos de moi</h1>
 

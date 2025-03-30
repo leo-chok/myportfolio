@@ -1,4 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@font-face {
+  font-family: "Press Start 2P"; /* Le nom que tu utiliseras dans tes styles */
+  src:
+    /* Chemin depuis la racine du site (car dans /public) */
+    /* Format WOFF2 (navigateurs modernes) en premier */ url("/fonts/PressStart2P-Regular.woff2")
+      format("woff2"),
+    /* Format WOFF (anciens navigateurs) */
+      url("/fonts/PressStart2P-Regular.woff") format("woff"),
+    /* Format TTF (très vieux navigateurs / fallback) */
+      url("/fonts/PressStart2P-Regular.ttf") format("truetype");
+  /* Poids et style de la police */
+  font-weight: 400; /* 400 = normal */
+  font-style: normal;
+  /* IMPORTANT pour la performance (évite le texte invisible) */
+  font-display: swap;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -30,7 +45,6 @@ body {
   padding: 1rem; /* Ajoute un peu d'espace autour */
   font-family: "Press Start 2P", cursive; /* Police pixel NES.css (optionnel ici, mais utile) */
 }
-
 
 h1 {
   font-size: 1.6em;
@@ -76,11 +90,6 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-
-
-
-
 
 /* Cibler le span DANS le badge DANS un conteneur NES */
 .nes-container .nes-badge > span {

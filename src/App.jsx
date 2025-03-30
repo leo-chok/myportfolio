@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return !isLoading ? (
-    <div>
+    <div style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
       <Navbar />
       <section id="accueil">
         <Hero />
@@ -49,16 +49,16 @@ function App() {
   ) : (
     <div
       style={{
-        display : "flex",
+        display: "flex",
         width: "100vw",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
         textAlign: "center",
-        overflow: "hidden"
+        overflow: "hidden",
       }}
     >
-      <PacmanLoader color="#ffe300" loading={true} speedMultiplier={2}/>
+      <PacmanLoader color="#ffe300" loading={true} speedMultiplier={2} />
     </div>
   );
 }
