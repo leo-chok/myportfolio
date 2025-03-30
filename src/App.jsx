@@ -18,8 +18,7 @@ function App() {
     setIsLoading(false);
   };
   useEffect(() => {
-    window.addEventListener("load", handleLoading);
-    return () => window.removeEventListener("load", handleLoading);
+    setTimeout(handleLoading, 3000);
   }, []);
 
   return !isLoading ? (
@@ -50,6 +49,7 @@ function App() {
     <div
       style={{
         display: "flex",
+        flexDirection: "column",
         width: "100vw",
         height: "100vh",
         justifyContent: "center",
@@ -58,6 +58,7 @@ function App() {
         overflow: "hidden",
       }}
     >
+    <h2>Chargement</h2>
       <PacmanLoader color="#ffe300" loading={true} speedMultiplier={2} />
     </div>
   );
