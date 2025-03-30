@@ -44,8 +44,8 @@ function Hero() {
         src={monAvatar} // Utilise la variable importée comme source
         alt="Mon Avatar Pixel Art" // Texte alternatif important pour l'accessibilité !
         style={{
-          width: "150px", // Ajuste la taille comme tu veux
-          height: "150px",
+          width: "200px", // Ajuste la taille comme tu veux
+          height: "300px",
           margin: "1.5rem 0", // Espace autour
           imageRendering: "pixelated", // Garde les pixels nets si l'image est redimensionnée !
         }}
