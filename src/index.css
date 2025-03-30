@@ -33,13 +33,13 @@ body {
 
 
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   line-height: 2;
   color: #209cee;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 2;
 }
 
@@ -54,7 +54,7 @@ p {
 }
 
 li {
-  font-size: 0.7em;
+  font-size: 0.6em;
   line-height: 1.5;
 }
 

@@ -131,7 +131,7 @@ function Projects() {
             </div>
 
             {/* Liens GitHub / Démo */}
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
               {project.githubLink && (
                 <a
                   href={project.githubLink}
@@ -155,7 +155,7 @@ function Projects() {
                   className="nes-btn is-success"
                 >
                   <i
-                    className="nes-icon external-link is-small"
+                    className="nes-icon youtube is-small"
                     style={{ marginRight: "0.5rem" }}
                   ></i>
                   Démo Live

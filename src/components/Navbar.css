@@ -33,16 +33,16 @@
   left: 0;
   right: 0; /* Prend toute la largeur */
 
-  background-color: #212529; /* Fond identique à la navbar */
-  /* Optionnel: ajoute une bordure comme la navbar si tu veux */
-  /* border-bottom: 4px solid #fff; */
+  background-color: #209CEE; /* Fond identique à la navbar */
+
+border-bottom: 4px solid #fff;
   /* border-image... si tu utilises la bordure nes */
 
   /* Cache le contenu qui dépasse pendant l'animation */
   overflow: hidden;
   /* Animation avec max-height */
   max-height: 0; /* Commence avec hauteur 0 (caché) */
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Animation douce */
+  transition: max-height 0.8s ease-out, padding 0.8s ease-out; /* Animation douce */
   padding-top: 0;
   padding-bottom: 0;
   z-index: 999; /* Juste en dessous de la navbar si elle a 1000 */
