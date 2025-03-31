@@ -40,6 +40,8 @@ function Navbar() {
 
   // Style pour le conteneur des liens desktop (sera caché sur mobile par CSS)
   const desktopLinksStyle = {
+    flexDirection: "row",
+    alignItems: "center",
     with: "100%",
   };
 
@@ -90,7 +92,6 @@ function Navbar() {
 
           {/* Côté Droit: Liens Desktop + Bouton Hamburger */}
           <div>
-            {" "}
             {/* Conteneur pour gérer l'affichage flex à droite */}
             {/* Liens Desktop (classe pour cibler en CSS) */}
             <div style={desktopLinksStyle} className="desktop-nav-links">
@@ -135,6 +136,7 @@ function Navbar() {
                 Contact
               </Link>
             </div>
+
             {/* Bouton Hamburger */}
             <button
               style={hamburgerButtonStyle}

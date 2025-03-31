@@ -2,7 +2,7 @@
 import React from "react";
 // Importe Link si tu veux le lien "Retour en haut"
 import { Link } from "react-scroll";
-import { User, Heart, ArrowUp } from "@nsmr/pixelart-react";
+import { ArrowUp } from "@nsmr/pixelart-react";
 
 
 function Footer() {

@@ -11,6 +11,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { PacmanLoader } from "react-spinners";
+import FontToggleButton from "./components/FontToggleButton";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -44,13 +45,14 @@ function App() {
       </section>
       <div style={{ paddingTop: "80px" }}></div>
       <Footer />
+      <FontToggleButton />
     </div>
   ) : (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
-        width: "100vw",
+        width: "98vw",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",
