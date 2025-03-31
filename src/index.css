@@ -40,8 +40,7 @@ a:hover {
 body {
   background-color: #212529; /* Fond noir */
   color: #ffffff; /* Texte blanc par défaut */
-  margin: 0; /* Supprime les marges par défaut */
-  padding: 1rem; /* Ajoute un peu d'espace autour */
+  margin: 0; 
   font-family: "Press Start 2P", cursive;
   transition: font-family 0.2s ease-in-out;
 }
@@ -126,6 +125,15 @@ button:focus-visible {
   vertical-align: middle;
   margin: 0.5rem 1rem; /* Ajoute un peu d'espace à droite si besoin */
   /* Ajuste les marges pour l'espacement entre badges si 'gap' ne suffit pas */
+}
+
+.nes-badge {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nes-badge:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
 }
 
 /* Style initial pour les éléments avant l'animation */

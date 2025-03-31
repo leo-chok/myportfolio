@@ -11,6 +11,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { PacmanLoader } from "react-spinners";
+import RunningSeparator from './components/RunningSeparator';
 import FontToggleButton from "./components/FontToggleButton";
 
 function App() {
@@ -23,33 +24,34 @@ function App() {
   }, []);
 
   return !isLoading ? (
-    <div style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
+    <div style={{ flex: 1, marginInline: "auto" }}>
       <Navbar />
-      <section id="accueil">
+      <section id="accueil" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <Hero />
       </section>
-      <section id="about">
+      <RunningSeparator />
+      <section id="about" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <About />
       </section>
-      <section id="experience">
+      <section id="experience" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <Experience />
       </section>
-      <section id="skills">
+      <section id="skills" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <Skills />
       </section>
-      <section id="projects">
+      <section id="projects" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <Projects />
       </section>
-      <section id="contact">
+      <section id="contact" style={{ flex: 1, marginInline: "auto", maxWidth: "1024px" }}>
         <Contact />
       </section>
-      <div style={{ paddingTop: "80px" }}></div>
       <Footer />
       <FontToggleButton />
     </div>
   ) : (
     <div
       style={{
+        flex: 1,
         display: "flex",
         flexDirection: "column",
         width: "98vw",

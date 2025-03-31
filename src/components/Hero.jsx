@@ -15,7 +15,7 @@ function Hero() {
   return (
     <section
       className="nes-container is-dark is-rounded is-centered"
-      style={{ marginBottom: "2rem", marginTop: "6rem" }}
+      style={{ marginBottom: "1rem", marginTop: "5rem" }}
     >
       {/* Mettons le nom en couleur primaire */}
       <h1

@@ -1,0 +1,46 @@
+/* src/components/RunningSeparator.css */
+
+/* Le conteneur qui définit la piste et cache ce qui dépasse */
+.running-separator {
+  width: 100%;
+  height: 80px; /* Hauteur de la bande de séparation (ajuste si besoin) */
+  overflow: hidden; /* Cache le personnage quand il est hors écran */
+  position: relative; /* Pour positionner l'image en absolu par rapport à lui */
+  margin: 0; /* Espace vertical avant/après le séparateur */
+  padding: 0;
+}
+
+/* L'image du personnage */
+.running-character {
+  height: 80px; /* Taille du personnage (ajuste à ton GIF) */
+  width: auto; /* Garde les proportions */
+  position: absolute; /* Permet de l'animer avec transform */
+  bottom: 5px;
+  image-rendering: pixelated;
+  animation-name: run-across-paused;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Définition de l'animation */
+@keyframes run-across-paused {
+  /* 0% : Début, hors écran gauche */
+  0% {
+    transform: translateX(-105vw);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(-105vw);
+    opacity: 1;
+  }
+
+  90% {
+    transform: translateX(105vw); /* Fin de la course, hors écran droite */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(105vw); /* Reste au même endroit */
+    opacity: 0;
+  }
+}
