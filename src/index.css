@@ -129,7 +129,11 @@ button:focus-visible {
 
 .nes-badge {
   transition: transform 0.2s ease-in-out;
+  color: "white";
+  font-weight: bolder;
+  color: #ffffff;
 }
+
 
 .nes-badge:hover {
   transform: scale(1.1);

@@ -6,14 +6,16 @@ import yoshiRunGif from "../assets/yoshi-run.gif";
 import sonicRunGif from "../assets/sonic-run.gif";
 import pikachuRunGif from "../assets/pika-run.gif";
 import kirbyRunGif from "../assets/kirby-run.gif";
+import linkRunGif from "../assets/link-run.gif";
 // ... autres imports ...
 
 import "./RunningSeparator.css"; // Ton CSS avec l'animation et SANS durée fixe
 
 // --- Tableau d'objets Personnage avec speed ---
 const characters = [
-  { id: "yoshi", name: "Yoshi", src: yoshiRunGif, speed: 6 },
   { id: "sonic", name: "Sonic", src: sonicRunGif, speed: 3 },
+  { id: "yoshi", name: "Yoshi", src: yoshiRunGif, speed: 6 },
+  { id: "link", name: "Link", src: linkRunGif, speed: 10 },
   { id: "pikachu", name: "Pikachu", src: pikachuRunGif, speed: 5 },
   { id: "kirby", name: "Kirby", src: kirbyRunGif, speed: 25 },
 ];

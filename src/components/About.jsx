@@ -8,7 +8,7 @@ function About() {
   const { ref, inView } = useInView({
     // Options :
     triggerOnce: true, // Déclenche l'animation une seule fois
-    threshold: 0.5, // Pourcentage de l'élément qui doit être visible pour déclencher (0.1 = 10%)
+    threshold: 0.1, // Pourcentage de l'élément qui doit être visible pour déclencher (0.1 = 10%)
     rootMargin: "0px 0px -50px 0px", // Optionnel: Ajuste la "zone" de détection
   });
 

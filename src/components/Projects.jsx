@@ -1,8 +1,9 @@
 // src/components/Projects.jsx
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import jambonbeurreLogo from "../assets/image_jambonbeurre.png";
 import jambonbeurreGif from "../assets/gif_jambonbeurre.gif";
+import clickitGif from "../assets/clickit.gif";
+import pokedexGif from "../assets/pokedex.gif";
 
 // Données du projet (à compléter)
 const projectData = [
@@ -12,8 +13,7 @@ const projectData = [
     // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
     description:
       "JambonBeurre est une application mobile conçue pour aider les personnes à trouver des compagnons de repas et éviter de manger seul. L'idée est née du constat que de nombreuses personnes, qu'elles soient étudiantes, salariées ou en voyage, prennent leurs repas seules alors qu'elles aimeraient partager un moment convivial autour d'une table. Développé dans le cadre d'un projet de fin de formation à La Capsule, JambonBeurre a été réalisé par une équipe de cinq développeurs en mettant l'accent sur la simplicité, l'expérience utilisateur et l'interaction en temps réel.",
-    imageUrl: jambonbeurreLogo,
-    gifUrl: jambonbeurreGif,
+    imageUrl: jambonbeurreGif,
     techStack: [
       "React Native",
       "Expo",
@@ -25,7 +25,28 @@ const projectData = [
     githubLink: "https://github.com/leo-chok/jambonbeurre_beta_frontend",
     liveDemoLink: "https://youtu.be/CRcOUVc1OcA",
   },
-  // Tu pourras ajouter d'autres objets ici pour d'autres projets plus tard
+  {
+    id: "pokedex",
+    title: "Pokedex",
+    // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
+    description:
+      "Mini site pour m'entrainer sur React et des composants, le tout relier à une API Web Service, afin de créer les cartes et ses informations.",
+    imageUrl: pokedexGif,
+    techStack: ["Node.js", "Express", "MongoDB", "React", "JavaScript", "API Web"],
+    githubLink: "https://github.com/leo-chok/pokedex-react-fr",
+    liveDemoLink: "https://pokedex-react-fr.vercel.app/",
+  },
+  {
+    id: "clickit",
+    title: "ClickIt!",
+    // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
+    description:
+      "\"Minijeu\" de clic où l'utilisateur n'a qu'une action à faire, cliquer sur le bouton. Il peut également rentrer un nom pour s'afficher dans le tableau des scores. J'ai créé ce site internet pour m'entrainer à la mise en place du backend et ma BDD en MongoDB, et le DOM (Html, CSS et Javascript)",
+    imageUrl: clickitGif,
+    techStack: ["Node.js", "Express", "MongoDB", "Html", "CSS", "JavaScript"],
+    githubLink: "https://github.com/leo-chok/clickit-front",
+    liveDemoLink: "https://clickit-front.vercel.app/",
+  },
 ];
 
 // Couleurs pour les badges de techno (comme dans Skills)
@@ -78,7 +99,7 @@ function Projects() {
                 }}
               >
                 <img
-                  src={project.gifUrl}
+                  src={project.imageUrl}
                   alt={`Aperçu de ${project.title}`}
                   style={{ maxWidth: "50%" }}
                 />
@@ -131,7 +152,13 @@ function Projects() {
             </div>
 
             {/* Liens GitHub / Démo */}
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                justifyContent: "center",
+              }}
+            >
               {project.githubLink && (
                 <a
                   href={project.githubLink}

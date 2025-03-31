@@ -1,0 +1,29 @@
+.avatar-eye-left {
+  position: absolute;
+  /* Ajuste top/left via style inline ou ici si fixe */
+  top: 21%;
+  left: 40%;
+  width: 10px;
+  height: 10px;
+  background-color: #2d170b; /* Noir */
+  z-index: 5;
+  /* Transition pour le mouvement */
+  transition: transform 0.3s ease-out;
+  /* Empêche les clics sur l'oeil lui-même */
+  pointer-events: none;
+}
+
+.avatar-eye-right {
+  position: absolute;
+  /* Ajuste top/left via style inline ou ici si fixe */
+  top: 21%;
+  right: 38%;
+  width: 10px;
+  height: 10px;
+  background-color: #2d170b; /* Noir */
+  z-index: 5;
+  /* Transition pour le mouvement */
+  transition: transform 0.3s ease-out;
+  /* Empêche les clics sur l'oeil lui-même */
+  pointer-events: none;
+}
