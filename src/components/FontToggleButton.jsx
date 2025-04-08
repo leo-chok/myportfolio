@@ -1,12 +1,12 @@
 // src/components/FontToggleButton.jsx
 import React from 'react';
-import { useFont } from '../context/FontContext'; // Importe le hook du contexte
+import { useFont } from '../context/FontContext'; 
 import { Visible } from "@nsmr/pixelart-react";
 
 function FontToggleButton() {
-  const { fontMode, toggleFontMode } = useFont(); // Utilise le contexte
+  const { fontMode, toggleFontMode } = useFont(); 
 
-  // Utilise un bouton NES.css pour la cohérence
+  
   return (
     <button
       type="button"

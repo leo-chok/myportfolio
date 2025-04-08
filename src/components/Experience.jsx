@@ -1,10 +1,10 @@
 // src/components/Experience.jsx
 import React from 'react';
-// 1. Importer le hook useInView
+
 import { useInView } from 'react-intersection-observer';
 
 function Experience() {
-  // 2. Utiliser le hook pour l'animation
+
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -15,7 +15,7 @@ function Experience() {
   );
 
   return (
-    // 3. Attacher la ref et les classes pour l'animation
+    
     <section
       ref={ref}
       className={`nes-container is-rounded is-dark with-title fade-in-section ${inView ? 'is-visible' : ''}`}

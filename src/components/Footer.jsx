@@ -1,6 +1,6 @@
 // src/components/Footer.jsx
 import React from "react";
-// Importe Link si tu veux le lien "Retour en haut"
+
 import { Link } from "react-scroll";
 import { ArrowUp } from "@nsmr/pixelart-react";
 
@@ -27,11 +27,8 @@ function Footer() {
     margin: "0 0.75rem", // Espace autour des icônes/liens
   };
 
-  const iconStyle = {
-    marginRight: "0.3rem", // Petit espace si l'icône a du texte à côté (non utilisé ici)
-  };
 
-  // Récupérer les URLs (assure-toi qu'elles sont correctes)
+
   const linkedInUrl = "https://www.linkedin.com/in/leo-stalhberger/";
   const githubUrl = "https://github.com/leo-chok";
 
@@ -40,14 +37,14 @@ function Footer() {
       {/* Optionnel: Lien "Retour en haut" */}
       <div style={{ marginBottom: "1rem" }}>
         <Link
-          to="accueil" // Doit correspondre à l'ID de ta section Hero/Top
+          to="accueil" 
           smooth={true}
           duration={500}
-          offset={-80} // Utilise le même offset que ta navbar
+          offset={-80} 
           style={linkStyle}
-          title="Retour en haut" // Tooltip
+          title="Retour en haut" 
         >
-          {/* Tu peux mettre une icône flèche ou juste du texte */}
+          
           <ArrowUp size={36} style={{ margin: '0.5rem'}} />
           Retour en haut
           <ArrowUp size={36} style={{ margin: '0.5rem'}} />
@@ -82,7 +79,7 @@ function Footer() {
           <i className="nes-icon github is-medium"></i>{" "}
           {/* Icône un peu plus grande */}
         </a>
-        {/* Ajoute d'autres icônes/liens si besoin */}
+        
       </div>
     </footer>
   );

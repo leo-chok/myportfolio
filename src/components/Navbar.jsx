@@ -57,18 +57,18 @@ function Navbar() {
     smooth: true,
     duration: 500,
     spy: true,
-    offset: -80, // Ajuste si nécessaire
-    activeClass: "active", // Classe pour le style actif
+    offset: -80, 
+    activeClass: "active", 
   };
 
-  // Style pour le bouton Hamburger (sera affiché uniquement sur mobile par CSS)
+  // Style pour le bouton Hamburger 
   const hamburgerButtonStyle = {
     background: "none",
     border: "none",
     color: "#fff",
     fontSize: "1.5rem",
     cursor: "pointer",
-    padding: "0.5rem", // Pour faciliter le clic
+    padding: "0.5rem", 
   };
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
@@ -82,7 +82,7 @@ function Navbar() {
             <Link
               to="accueil"
               {...scrollProps}
-              offset={-100} // Offset différent pour le retour tout en haut ?
+              offset={-100} 
               style={{ ...linkStyle, fontWeight: "bold" }}
               className="nav-link"
             >
@@ -154,8 +154,7 @@ function Navbar() {
       {isMobileMenuOpen && (
         <div className="mobile-menu open">
           {" "}
-          {/* Ajout de la classe 'open' */}
-          {/* Copie les mêmes liens que pour desktop, mais ajoute onClick={closeMobileMenu} */}
+          
           <Link
             to="about"
             {...scrollProps}

@@ -28,7 +28,7 @@ const projectData = [
   {
     id: "pokedex",
     title: "Pokedex",
-    // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
+    
     description:
       "Mini site pour m'entrainer sur React et des composants, le tout relier à une API Web Service, afin de créer les cartes et ses informations.",
     imageUrl: pokedexGif,
@@ -39,7 +39,7 @@ const projectData = [
   {
     id: "clickit",
     title: "ClickIt!",
-    // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
+    
     description:
       "\"Minijeu\" de clic où l'utilisateur n'a qu'une action à faire, cliquer sur le bouton. Il peut également rentrer un nom pour s'afficher dans le tableau des scores. J'ai créé ce site internet pour m'entrainer à la mise en place du backend et ma BDD en MongoDB, et le DOM (Html, CSS et Javascript)",
     imageUrl: clickitGif,
@@ -55,7 +55,7 @@ const badgeColors = ["is-primary", "is-success", "is-warning", "is-error"];
 function Projects() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1, // Déclencher un peu plus tôt pour les sections potentiellement plus hautes
+    threshold: 0.1, 
   });
 
   return (
@@ -74,9 +74,7 @@ function Projects() {
 
         {/* Mapper sur chaque projet dans projectData */}
         {projectData.map((project, index) => (
-          // Utiliser un container NES pour chaque carte de projet
-          // Note: On pourrait aussi appliquer l'animation à chaque carte individuellement
-          // en appelant useInView à l'intérieur du map, mais commençons simple.
+          
           <div
             key={project.id}
             className="nes-container is-rounded is-dark with-title"

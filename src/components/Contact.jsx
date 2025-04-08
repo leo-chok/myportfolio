@@ -2,9 +2,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-// !!! IMPORTANT : Remplace par ton URL Formspree personnelle !!!
-// Inscris-toi sur formspree.io, crée un formulaire, et copie l'endpoint ici.
-const FORM_ENDPOINT = "https://formspree.io/f/manedeyw"; // <-- METS TON URL ICI
+const FORM_ENDPOINT = "https://formspree.io/f/manedeyw";
 
 function Contact() {
   const { ref, inView } = useInView({
@@ -12,10 +10,10 @@ function Contact() {
     threshold: 0.1,
   });
 
-  // Tes préférences
-  const showPhoneNumber = false; // Téléphone désactivé
-  const linkedInUrl = "https://www.linkedin.com/in/leo-stalhberger/"; // Ton LinkedIn
-  const githubUrl = "https://github.com/leo-chok"; // Ton GitHub
+
+  const showPhoneNumber = false; 
+  const linkedInUrl = "https://www.linkedin.com/in/leo-stalhberger/"; 
+  const githubUrl = "https://github.com/leo-chok"; 
 
   return (
     <section
@@ -37,8 +35,7 @@ function Contact() {
             <a href="mailto:stalh.leo@gmail.com">stalh.leo@gmail.com</a>
           </p>
 
-          {/* Téléphone (désactivé) */}
-          {/* {showPhoneNumber && ( ... )} */}
+          
 
           {/* Localisation */}
            <p style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem' }}>

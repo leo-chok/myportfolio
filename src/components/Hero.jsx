@@ -11,8 +11,8 @@ function Hero() {
     smooth: true,
     duration: 500,
     spy: true,
-    offset: -80, // Ajuste cette valeur ! Doit être environ -hauteurDeTaNavbar
-    activeClass: "active", // On ajoutera cette classe CSS plus tard si tu veux
+    offset: -80, 
+    activeClass: "active", 
   };
 
   const avatarRef = useRef(null); // Ref pour l'image avatar
@@ -28,12 +28,11 @@ function Hero() {
     const handleMouseMove = (event) => {
       if (!avatarRef.current || !eyeRef.current) return;
 
-      // Position de l'avatar (on pourrait la calculer une seule fois ou au resize)
+      // Position de l'avatar 
       const avatarRect = avatarRef.current.getBoundingClientRect();
-      // Centre de l'avatar ou position de l'oeil au repos (approximatif)
-      // Adapte ces valeurs selon où est l'oeil sur ton avatar !
+    
       const eyeOriginX = avatarRect.left + avatarRect.width * .5;
-      const eyeOriginY = avatarRect.top + avatarRect.height * .2; // Exemple: 40% du haut
+      const eyeOriginY = avatarRect.top + avatarRect.height * .2; 
 
       // Position de la souris
       const mouseX = event.clientX;
@@ -43,7 +42,7 @@ function Hero() {
       const deltaX = mouseX - eyeOriginX;
       const deltaY = mouseY - eyeOriginY;
 
-      // Limiter le déplacement de l'oeil (ex: max 5 pixels dans chaque direction)
+      // Limiter le déplacement de l'oeil 
       const maxMove = 5;
       const angle = Math.atan2(deltaY, deltaX); // Angle vers la souris
       // Calcule le déplacement mais limite sa magnitude
@@ -63,7 +62,7 @@ function Hero() {
     };
 
     // Applique le throttle pour ne pas surcharger
-    const throttledMouseMove = throttle(handleMouseMove, 100); // Met à jour max toutes les 50ms
+    const throttledMouseMove = throttle(handleMouseMove, 100); 
 
     window.addEventListener("mousemove", throttledMouseMove);
 
@@ -72,7 +71,7 @@ function Hero() {
       window.removeEventListener("mousemove", throttledMouseMove);
       throttledMouseMove.cancel(); // Annule tout appel throttled en attente
     };
-  }, []); // [] = exécuté une seule fois au montage
+  }, []); 
   return (
     <section
       className="nes-container is-dark is-rounded is-centered"
@@ -82,7 +81,7 @@ function Hero() {
       <h1
         style={{
           marginBottom: "0",
-          color: "#209cee" /* Ou utiliser une classe si tu préfères */,
+          color: "#209cee" ,
         }}
       >
         Léo Stalhberger
@@ -96,24 +95,24 @@ function Hero() {
       >
         <img
           ref={avatarRef}
-          src={monAvatar} // Utilise la variable importée comme source
-          alt="Mon Avatar Pixel Art" // Texte alternatif important pour l'accessibilité !
+          src={monAvatar} 
+          alt="Mon Avatar Pixel Art" 
           style={{
-            width: "225px", // Ajuste la taille comme tu veux
+            width: "225px", 
             height: "350px",
-            margin: "0", // Espace autour
+            margin: "0", 
           }}
         />
         <div
-          ref={eyeRef} // Attache la ref à l'oeil
-          className="avatar-eye-left" // Classe pour le style de base
+          ref={eyeRef} 
+          className="avatar-eye-left" 
           style={{
              ...eyeStyle
           }}
         ></div>
         <div
-          ref={eyeRef} // Attache la ref à l'oeil
-          className="avatar-eye-right" // Classe pour le style de base
+          ref={eyeRef} 
+          className="avatar-eye-right" 
           style={{
              ...eyeStyle
           }}
@@ -143,7 +142,7 @@ function Hero() {
           textAlign: "center",
         }}
       >
-        {/* Gardons le bouton primaire et mettons le second en succès (vert) */}
+        
         <Link
           className="nes-btn is-primary nav-link"
           to="projects"
