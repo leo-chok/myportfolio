@@ -4,9 +4,28 @@ import { useInView } from "react-intersection-observer";
 import jambonbeurreGif from "../assets/gif_jambonbeurre.gif";
 import clickitGif from "../assets/clickit.gif";
 import pokedexGif from "../assets/pokedex.gif";
+import toothyGif from "../assets/toothy-project.gif";
 
 // Données du projet (à compléter)
 const projectData = [
+  {
+    id: "toothy",
+    title: "Toothy",
+    // TODO: Demander à l'utilisateur une courte description (1-2 phrases)
+    description:
+      "Toothy est une application mobile conçue pour aider les utilisateurs à suivre leur assiduité au brossage des dents. J'ai donné un côté ludique et amusant afin de viser une cible jeune. J'ai gamifié l'application en ajoutant un sytème de points, que je ferais évoluer par la suite. L'application propose également un tableau de bords avec des statistiques sur l'hygiène dentaire de l'utilisateur.",
+    imageUrl: toothyGif,
+    techStack: [
+      "React Native",
+      "Expo",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JavaScript",
+    ],
+    githubLink: "https://github.com/leo-chok/toothbrush-tracker-app",
+    liveDemoLink: "https://expo.dev/preview/update?message=Add%20musics%20for%20brushing%20sessions&updateRuntimeVersion=1.0.0&createdAt=2025-04-21T15%3A43%3A22.738Z&slug=exp&projectId=1bdebab6-5a46-4760-9c95-7cfe1e5b9900&group=28b791ed-d58a-45bf-b8de-7c1913884132",
+  },
   {
     id: "jambonbeurre",
     title: "JambonBeurre",
