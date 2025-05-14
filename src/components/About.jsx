@@ -26,18 +26,18 @@ function About() {
       
       <p>
         Après plusieurs années dans la conception et l'infographie 3D, j'ai
-        choisi de me réorienter vers ma passion pour la technologie en devenant{" "}
-        <span className="nes-text is-primary">Développeur Full-Stack</span>.
+        choisi de me réorienter vers ma passion pour la technologie en devenant 
+        <span className="nes-text is-primary"> Développeur Full-Stack</span>.
       </p>
       
       <p>
         Curieux et passionné par l'évolution technologique, notamment la{" "}
         <span className="nes-text is-primary">VR/AR</span>, je cherche
         maintenant une <span className="nes-text is-warning">alternance</span>{" "}
-        pour continuer à monter en compétences, avec un intérêt marqué pour les
-        pratiques <span className="nes-text is-success">DevOps</span>.
-        J'apprends vite et j'aime travailler en équipe sur des projets innovants
-        !
+        pour continuer à monter en compétences, avec un intérêt marqué pour le métier de 
+        <span className="nes-text is-success"> Software Engineer</span>.<br></br>
+        Le monde du développement est en constante évolution, et je mise avant tout sur une compréhension complète d'une architecture propre, et une vision globale d'un projet.
+        Je continue ma formation dans ce sens, en mettant l'accent sur les bonnes pratiques de développement, la gestion de projet et la collaboration en équipe.
       </p>
     </section>
   );

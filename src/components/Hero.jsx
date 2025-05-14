@@ -128,9 +128,10 @@ function Hero() {
       <p style={{ marginBottom: "1rem" }}>
         Passionné de code et d'expériences intéractives (Jeux Vidéo) <br></br>
         En recherche d'
-        <span className="nes-text is-warning">alternance</span> (Objectif{" "}
-        <span className="nes-text is-success">DevOps</span>)
-      </p>
+        <span className="nes-text is-warning">alternance sur 2 ans </span>
+        en Master avec 
+
+        <span className="nes-text is-success"> Epitech</span>      </p>
 
       <div
         style={{

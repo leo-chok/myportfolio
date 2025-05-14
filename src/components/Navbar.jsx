@@ -86,7 +86,8 @@ function Navbar() {
               style={{ ...linkStyle, fontWeight: "bold" }}
               className="nav-link"
             >
-              Léo Stalhberger
+              Leochok
+
             </Link>
           </div>
 

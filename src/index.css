@@ -56,13 +56,13 @@ body.classic-font {
 }
 
 h1 {
-  font-size: 1.6em;
+  font-size: 2em;
   line-height: 2;
   color: #209cee;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.5em;
   line-height: 2;
 }
 
@@ -72,12 +72,12 @@ h3 {
 }
 
 p {
-  font-size: 0.8em;
+  font-size: 1.0em;
   line-height: 1.5;
 }
 
 li {
-  font-size: 0.6em;
+  font-size: 0.8em;
   line-height: 1.5;
 }
 
