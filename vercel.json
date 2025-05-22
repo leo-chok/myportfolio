@@ -1,8 +1,0 @@
-{
-  "rewrites": [
-    {
-      "source": "/keepgoals/:path*",
-      "destination": "https://financial-dashboard-frontend-chi.vercel.app/:path*"
-    }
-  ]
-}
