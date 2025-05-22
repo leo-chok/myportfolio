@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/keepgoals/(.*)",
-      "destination": "https://financial-dashboard-frontend-chi.vercel.app/"
+      "destination": "https://financial-dashboard-frontend-chi.vercel.app/$1"
     }
   ]
 }
